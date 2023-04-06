@@ -90,3 +90,7 @@ p:first-child {
 li:nth-child(even){
     color: red;
 }
+
+h6 {
+    color: purple;
+}
