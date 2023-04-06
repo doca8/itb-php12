@@ -1,0 +1,45 @@
+body {
+    background-color: #7AA874;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #6b0707;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    border: 10px double green;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.p1 {
+    color: #DF2E38;
+    font: 20px Arial;
+}
+
+.p2 {
+    color: darkorchid;
+    font-size: 25px;
+
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}
+
+
