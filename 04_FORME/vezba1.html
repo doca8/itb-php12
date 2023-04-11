@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vezba1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="test.php" method="get">
+        <fieldset class="fields">
+            <legend>Form Validation</legend>
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label for="pass">Password: </label>
+                <input type="password" name="pass" id="pass">
+            </p>
+            <p>
+                <label for="repass">Re-type password: </label>
+                <input type="password" name="pass" id="repass">
+            </p>
+            <div class="gen">
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" id="male" value="male"> Male
+                <input type="radio" name="gender" id="female" value="female"> Female
+                <input type="radio" name="gender" id="other" value="other"> Other
+            </div>
+            <div class="ps">
+                <label for="ps">Programming skills: </label>
+                <input type="checkbox" name="java" id="java" value="true"> Java
+                <input type="checkbox" name="android" id="android" value="true"> Android
+                <input type="checkbox" name="ruby" id="ruby" value="true"> Ruby
+                <input type="checkbox" name=".net" id=".net" value="true"> .Net
+            </div>
+            <p>
+                <label for="num">Contact no:</label>
+                <input type="number" name="num" id="num" min="0" max="10">
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+            </p>
+            <div class="col">
+                <label for="college">College: </label>
+                <select name="college" id="college">
+                    <option value="medicine">Medicinski Fakultet </option>
+                    <option value="enginnering">Elektronski Fakultet</option>
+                    <option value="arhitecture">Arhitektura</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Submit">
+            
+        </fieldset>
+    </form>
+    
+</body>
+</html>

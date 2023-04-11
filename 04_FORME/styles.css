@@ -1,0 +1,14 @@
+body {
+    background-color: blanchedalmond;
+    font: 20px Arial;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+  }
+
+.fields {
+    border: 3px solid rgb(27, 27, 27);
+    
+}
