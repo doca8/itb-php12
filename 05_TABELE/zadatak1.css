@@ -1,0 +1,63 @@
+table {
+    width: 90%;
+    text-align: center;
+    /* background-image: url("img/chelsea.png"); 
+    moze i background-image samo treba da se stavi ovde.*/
+}
+
+
+table, tr,  td, caption {
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    margin: 4rem;
+}
+
+/* Mogao sam i th da dodam gore ako hocu da ima border ali nisam hteo. */
+
+th {
+    background-color: #04aa6d;
+    color: white;
+    font-size: 20px;
+}
+/* Obicna table da se napravi ovo stavljam uvek a dalje mogu da menjam
+
+NAJBITNIJE JE:
+table, tr, th, td, caption!!!!
+border: 1px solid black; na primer
+border-collapse: collapse; ( da se ne duplira border)*/
+
+#prva tr:nth-child(odd){
+    font-style: italic;
+}
+
+.zuta {
+    background-color: yellow;
+}
+
+
+#druga td:nth-child(3) {
+    background-color: yellow;
+}
+
+#druga th:nth-child(3) {
+    background-color: yellow;
+}
+
+#druga tr:nth-child(even):hover {
+    background-color: yellow;
+}
+  
+#druga tr:nth-child(3) {
+    color: blue;
+}
+
+
+/* #druga th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkgreen;
+    color: white;
+} */
