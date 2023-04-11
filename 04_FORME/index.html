@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Forme</title>
+    
 </head>
 <body>
     <form action="test.php" method="get">
@@ -17,11 +18,12 @@
                 <input type="text" value="stefan" placeholder="username"  name="username" id="username" 
                     readonly="readonly">
             </p>
+            <!-- placeholder, autocomplete="on" required, autofocus(samo jedan element moze da ima autofocus) -->
             <p>
                 <label for="pass">Password:</label>
                 <input type="password" name="pass" id="pass">
             </p>
-            
+            <!-- autocomplete ne radi kod passworda! -->
         </fieldset>
 
         <fieldset>
@@ -34,6 +36,12 @@
                 <label for="em">Email:</label>
                 <input type="email" name="em" id="em">
             </p>
+            <p>
+                <label for="phone">Phone: </label>
+                <input type="tel" name="phone" id="phone" placeholder="5555555555"
+                pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+            </p>
+            <!-- pattern="[0-9]{3}[0-9]{3}[0-9]{4}" kako mora da upise broj a ne moze da koristi druge cifre, slova itd... -->
             <p>
                 <label for="gender">Gender: </label>
                 <input type="radio" name="gender" id="male" value="male"> Male
@@ -68,9 +76,11 @@
                 </select>
             </p>
         </fieldset>
+        <!-- select > mogu da stavim multiple-da izabere vise opcija i size="5" koliko se vidi sa liste stvari. -->
             <p>
                 <input type="submit" value="Submit">
             </p>
     </form>
+    
 </body>
 </html>
