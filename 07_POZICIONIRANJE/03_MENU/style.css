@@ -14,6 +14,7 @@
     top: 0;
     width: 100%;
     z-index: 1;
+    
 }
 
 .topbar ul {
@@ -27,6 +28,7 @@
     border: 1px solid aquamarine;
     text-align: center;
     background-color: brown;
+    
 }
 
 .topbar ul li a {
@@ -37,9 +39,14 @@
     font-size: 20px;
 }
 
+/* zbog float svojstva prethodno moze ovde BLOCK da se stavi jer onda
+ce svakako padding raditi a mozemo da kliknemo ne samo na slova vec na celu
+kocku. */
+
 .topbar ul li a:hover {
     background-color: chocolate;
 }
+
 
 /* body {
     padding-top: 40px;
@@ -98,6 +105,8 @@ section {
 
 /* Padajuci meni */
 
+
+/* da na 4 li imamo dropdown sa izborima... */
 .dropdown {
     display: none;
 }
