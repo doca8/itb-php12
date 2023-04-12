@@ -82,19 +82,21 @@ section {
 
 }
 
+.red1 aside ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 0;
+    display: block;
+    font-size: 20px;
+
+}
+
 .red1 aside ul li a:hover {
     background-color: darkorange;
 
 }
 
-.red1 aside ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 0;
-    display: block;
-    font-size: 20px;
 
-}
 
 .red1 section {
     float: left;
