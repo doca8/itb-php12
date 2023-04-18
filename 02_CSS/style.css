@@ -73,11 +73,11 @@ a::before {
     font-size: 30px;
 }
 
-/*
-p:first-child {
-    border: 5px dotted silver;
-}
-*/
+
+/* p:first-child {
+    border: 5px dotted rgb(22, 22, 22);
+} */
+
 
 /* p:first-of-type {
     border: 5px dotted silver;

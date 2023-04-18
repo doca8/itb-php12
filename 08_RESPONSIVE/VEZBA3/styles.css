@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+div img {
+    /* width: 33%; */
+    height: 300px;
+    width: 100%;
+
+}
+
+
+.poz1 {
+    position: relative;
+    top: 30px;
+    overflow: hidden;
+}
+
+.prva {
+    float: left;
+    width: 30%;
+   
+}
+
+.poz1 aside {
+    float: left;
+    width: 70%;
+}
+
+
+/* ovo je za listu */
+
+
+.prva ul {
+    float: left;
+    list-style-type: none;
+}
+
+.prva ul li {
+    background-color: aquamarine;
+    border: 1px solid black;
+
+}
+
+.prva ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    display: block;
+}
+
+.prva ul li a:hover {
+    background-color: brown;
+}
+
+.slike {
+    position: relative;
+    top: 33px;
+}
+
+.biljke {
+    position: relative;
+    top: 50px;
+}
+
+.welcome {
+    position: relative;
+    top: 70px;
+}
+/* grid */
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+[class*=col-] {
+    float: left;
+}
+
+[class*=col-] {
+    width: 100%;
+} 
+
+@media only screen and (min-width:1000) {
+    .col-t-1 {
+        
+        width: calc(100%/12);
+    }
+    
+    .col-t-2 {
+        
+        width: calc(100%/12*2);
+    }
+    
+    .col-t-3 {
+        width: 25%;
+    }
+    
+    .col-t-4 {
+        width: calc(100%/12*4);
+    }
+    
+    .col-t-5 {
+        width: calc(100%/12*5);
+    }
+    
+    .col-t-6 {
+        width: 50%;
+    }
+    
+    .col-t-7 {
+        width: calc(100%/12*7);
+    }
+    
+    .col-t-8 {
+        width: calc(100%/12*8);
+    }
+    
+    .col-t-9 {
+        width: calc(100%/12*9);
+    }
+    
+    .col-t-10 {
+        width: calc(100%/12*10);
+    }
+    
+    .col-t-11 {
+        width: calc(100%/12*11);
+    }
+    
+    .col-t-12 {
+        width: calc(100%/12*12);
+    }
+    
+    
+}
+
+header{
+    background-color: brown;
+}
+.poz1 {
+    background-color: blueviolet;
+}

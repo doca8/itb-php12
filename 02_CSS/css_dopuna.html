@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div>p {
+            color: blue;
+        }
+
+        div+p {
+            background-color: green;
+        }
+
+        div~p {
+            border: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS selectori</h2>
+
+    <p><strong>div > p</strong> - stilizuje sve p elemente unutar div-a ali samo na prvom stepenu - direktni potomak</p>
+    <p><strong>div + p</strong> - stilizuje sve p elemente odmah ispod div-a</p>
+    <p><strong>div ~ p</strong> - stilizuje sve p elemente koji su na istom nivou kao div</p>
+
+
+    <div>
+        <p>Paragraf 1 je unutar div-a</p>
+        <p>Paragraf 2 je unutar div-a</p>
+        <section>
+            <p>Paragraf 3 je unutar div-a ali unutar sekcije.</p>
+        </section>
+        <p>Paragraf 4 je unutar div-a</p>
+    </div>
+
+    <p>Paragraf 5 nije unutar div-a ali je odmah posle diva</p>
+    <p>Paragraf 6 nije unutar div-a</p>
+
+    <div>
+        <p>Paragraf 7 je unutar div-a</p>
+        <p>Paragraf 8 je unutar div-a</p>
+    </div>
+
+    <p>Paragraf 9 nije unutar div-a ali je odmah posle diva</p>
+    <p>Paragraf 10 nije unutar div-a</p>
+
+</body>
+
+</html>
