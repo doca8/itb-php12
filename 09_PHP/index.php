@@ -23,21 +23,25 @@
    echo "<br>";
    echo 'vrednost promenljive b je $b'; /* ovo je greska */ 
 //  Prilikom ispisanja ECHO  mora da bude uokviren duplim navodnicima
-   echo "<br>";        
+   echo "<br>";    
+   echo "<hr>";    
     $c= "1";
     $d = $c . 2;
     echo $d;
+    echo "<hr>";
 
-    echo "<br>"; 
+    echo "<hr>";
     $d = $d + 2;  /* $d += 2;  isto je ali krace ovo drugo */
     echo $d;
-    echo "<br>"; 
+    echo "<hr>";
+
 
     $d += $c + 2;
     echo $d;
-    echo "<br>"; 
+    echo "<hr>";
 // proveri sa njenim kodom
 
+    echo "<hr>";
     $d = $d - 5;
     echo $d;
     echo "<br>"; 

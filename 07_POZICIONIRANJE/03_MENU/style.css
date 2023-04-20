@@ -77,9 +77,9 @@ section {
 
 .red1 aside ul li {
     border: 1px solid aquamarine;
-    text-align: center;
     background-color: rgb(211, 112, 20);
-
+    text-align: center;
+    
 }
 
 .red1 aside ul li a {
