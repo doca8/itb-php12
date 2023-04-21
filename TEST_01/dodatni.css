@@ -12,7 +12,10 @@ footer {
 
 img {
     width: 100%;
-    height: 100px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: inline-block;
 }
 
@@ -114,12 +117,19 @@ h4 {
 
 label, .dugme {
     width: 33.33%;
+    float: left;
 }
 
 input {
     width: 66.66%;
     position: relative;
     left: 120px;
+    float: right;
+    
+}
+
+.cleaner {
+    clear: both;
 }
 
 

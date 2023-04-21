@@ -25,6 +25,20 @@
     
 
 @media only screen and (min-width: 600px) {
+
+   
+        .naslov {
+            background-color: darkgreen;
+        }
+
+        p {
+            color: darkgreen;
+        }
+
+        table {
+            display: none;
+        }
+    
     .col-1 { width: calc(100%/12); }
     
     .col-2 { width: calc(100%/12*2) }
