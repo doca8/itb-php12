@@ -132,6 +132,7 @@
         $arsr = $zbir / $brElemenata;
         echo "<p>Aritmetička sredina je: $arsr</p>";
     }
+    echo "<hr>";
 
     /////////////////////////
 
@@ -148,11 +149,23 @@
         }
     }
     echo "<p>Najveći element ovog niza je $maks</p>";
+    echo "<hr>";
 
     /////////////////////////
 
     // 5. ZADATAK
     // Odrediti minimalnu vrednost u celobrojnom nizu.
+    $brojevi = [5, 14, -4, 0, 11, -7, 91];
+    $min = $brojevi[0];
+    for ($i = 0; $i < count($brojevi); $i++) {
+        $trenutniElement = $brojevi[$i];
+        if ($trenutniElement < $min) {
+            $min = $trenutniElement;
+        }
+    }
+    echo "<p>Najmanji element ovog niza je $min</p>";
+    echo "<hr>";
+    
 
     ///////////////////////// 
 
@@ -260,53 +273,284 @@
             $sviIndeksiMaks[] = $i;
         }
     }
+    
 
     echo "Najveći element ima vrednost $maks, a njegovi indeksi pojavljivanja su: ";
     // $sviIndeksiMaks = [2, 4, 7];
     for($i=0; $i<count($sviIndeksiMaks); $i++) {
         echo "$sviIndeksiMaks[$i]; ";
     }
+    echo "<hr>";
     // Ispis niza može i sa implode
 
     ///////////////////////// 
 
     // 7. ZADATAK
     // Odrediti broj elemenata celobrojnog niza koji su veći od srednje vrednosti.
+    $brojevi = [1, 2, 15];
+    //NETACAN PRISTUP:
+    // $zbir = 0;
+    // $broj = 0;
+    // for ($i = 0; $i < count($brojevi); $i++) {
+    //     $zbir += $brojevi[$i];
+    //     $arsr = $zbir / count($brojevi);
+    //     if ($brojevi[$i] > $arsr) {
+    //         $broj++;
+    //     }
+    // }
+
+    $zbir = 0;
+    $broj = 0;
+    for ($i = 0; $i < count($brojevi); $i++) {
+        $zbir += $brojevi[$i];
+    }
+    $arsr = $zbir / count($brojevi);
+    for ($i = 0; $i < count($brojevi); $i++){
+        if ($brojevi[$i] > $arsr) {
+            $broj++;
+        }
+    }      
+    echo "<p>Broj brojeva vecih od srednje vrednosti niza je: $broj</p>";
+    echo "<hr>";
 
     ///////////////////////// 
 
     // 8. ZADATAK
     // Izračunati zbir pozitivnih elemenata celobrojnog niza.
+    $brojevi = [10 ,3, 50, 9];
+    $zbir = 0;
+    for ($i = 0; $i < count($brojevi); $i++) {
+        if ($brojevi[$i] > 0) {
+            $zbir += $brojevi[$i];
+        }
+    }
+    echo "<p>Zbir pozitivnih elemenata je: $zbir</p>";
+    echo "<hr>";
+
+    //Bonus zadatak
+    // Izracunati srednju vrednost parnih elemenata celobrojnog niza 
+    $zbir = 0;
+    $broj = 0;
+    for ($i = 0; $i < count($brojevi); $i++) {
+        if ($brojevi[$i] % 2 == 0) {
+            $zbir += $brojevi[$i];
+            $broj++;
+        }
+    }
+    if ($broj != 0) {
+        $arsr = $zbir / $broj;
+    } 
+    else {
+        $arsr = 0;
+    }
+    echo "<p>Srednja vrednost parnih elemenata celobrojnog niza je: $arsr</p>";
+    echo "<hr>";
 
     ///////////////////////// 
 
     // 9. ZADATAK
     // Odrediti broj parnih elemenata u celobrojnom nizu.
+    $brojevi = [0, 1, 2, 3, 4, 5, 6];
+    $brojac = 0;
+    for ($i = 0; $i < count($brojevi); $i++) {
+        if ($brojevi[$i] % 2 == 0) {
+            $brojac++;
+        }
+    }
+    echo "<p>Broj parnih elemenata u celobrojnom nizu je: $brojac</p>";
+    echo "<hr>";
 
     ///////////////////////// 
 
     // 10. ZADATAK
     //  Izračunati sumu elemenata u nizu sa parnim indeksom.
-
+    $brojevi = [10, 9, 15, 50, -5];  /*1 + 15 + 0 + 4 = 20*/
+    $suma = 0;
+    for ($i = 0; $i < count($brojevi); $i += 2) {
+        $suma += $brojevi[$i];
+    }
+    echo "<p>Suma elemenata u nizu sa parnim indeksom je: $suma</p>";
+    echo "<hr>";
     ///////////////////////// 
 
     // 11. ZADATAK
     // Promeniti znak svakom elementu celobrojnog niza.
-
+    var_dump($brojevi);
+    echo "<br>";
+    $brojevi = [10, 9, 15, 50, -5];
+    for ($i = 0; $i < count($brojevi); $i++) {
+        $brojevi[$i] *= -1;
+        // $brojevi[$i] = $brojevi[$i] * (-1);
+        //$brojevi[$i] = -$brojevi[$i];
+    }
+    var_dump($brojevi);
+    echo "<hr>";
     ///////////////////////// 
 
     // 12. ZADATAK
     // Promeniti znak svakom neparnom elementu celobrojnog niza sa parnim indeksom.
+    $brojevi = [5, 2, -3, 4, -5, -6];
+    var_dump($brojevi);
+    echo "<br>";
+    for ($i = 0; $i < count($brojevi); $i += 2) {
+        if ($brojevi[$i] % 2 != 0) {
+            $brojevi[$i] *= -1;
+        }
+    }
+    var_dump($brojevi);
+    echo "<br>";
+
+    //Drugi nacin:
+    $brojevi =[10, 9, 15, 50];
+    var_dump($brojevi);
+    for ($i = 0; $i < count($brojevi); $i++)
+    {
+        if ($i % 2 == 0 && $brojevi[$i] % 2 != 0)
+        {
+                $brojevi[$i] *= -1;
+        }
+    }
+    var_dump($brojevi);
+    echo "<hr>";
 
     /////////////////////////     
 
     // 13. ZADATAK
     // Odrediti broj parnih elemenata sa neparnim indeksom.
+    $brojevi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    $brojac = 0;
+    for ($i = 1; $i < count($brojevi); $i += 2) {
+        if ($brojevi[$i] % 2 == 0) {
+            $brojac++;
+        }
+    }
+    echo "<p>Broj parnih elemenata sa neparnim indeksom je: $brojac</p>";
+    echo "<hr>";
 
+    //Drugi nacin:
+    $brojevi =[10, 9, 15, 50];
+    $brojElem = 0;
+    for ($i = 0; $i < count($brojevi); $i++)
+    {
+        if ($i % 2 != 0 && $brojevi[$i] % 2 == 0)
+        {
+                $brojElem++;
+        }
+    }
+    echo "<p>Broj parnih elemenata sa neparnim indeksom je: $brojElem</p>";
+    echo "<hr>";
     /////////////////////////    
 
     // 14. ZADATAK
     // Ispisati dužinu svakog elementa u nizu stringova.
+    $imena = ["Stefan", "Aleksandar", "Adam", "Marija", "Dunja", "Milijana", "Djordje"];
+    for ($i = 0; $i < count($imena); $i++) {
+        $ime = $imena[$i];
+        // $duzina = mb_strlen($ime, "UTF-8"); ako hocemo nasa slova
+        $duzina = strlen($ime);
+        echo "<p>Duzina stringa $ime je $duzina</p>";
+    }
+    echo "<hr>";
+    /////////////////////////   
     
-    /////////////////////////    
+    /*15. ZADATAK
+     Odrediti element u nizu stringova sa najvećom dužinom. */
+    //  $imena = ["Stefan", "Aleksandar", "Adam", "Marija", "Dunja", "Milijana", "Djordje"];
+     $imena = ["Stefan", "Marija", "Ana"];
+     $stringMaxDuzine = $imena[0];
+     $maxDuzina = strlen($imena[0]);
+
+     for ($i = 1; $i < count($imena); $i++) {
+        if (strlen($imena[$i]) > $maxDuzina) {
+            $maxDuzina = strlen($imena[$i]);
+            $stringMaxDuzine = $imena[$i];
+        }
+     }
+     echo "<p>Element niza sa maksimalnom duzinom je: $stringMaxDuzine</p>";
+     echo "<hr>";
+
+     /////////////////////////  
+
+     /*16. ZADATAK
+     Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu. */
+
+     ///////////////////////// 
+
+     /*17. ZADATAK
+      Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a'. */
+
+      //Kako da odredimo da li se u nekom stringu nalazi neki podstring?
+     //Ovde funkcija ne utice na logiku zadatka zato je koristimo
+     //Koristimo funkciju strpos($str1, $str2);
+     //Rezultat poziva ove funkcije:
+     // 1) Ako se $str2 nalazi unutar $str1, onda se vraca INDEKS prvog pojavljivanja
+     //Kao rezultat se vraca CEO BROJ(0, 1, 2, 3, ....)
+     // 2) Ako se $str2 ne nalazi u $str1, onda se vraca FALSE
+     //Vraca se LOGICKA VREDNOST
+     //MORAMO DA PROVERIMO DA LI JE !== false i po VREDNOSTI i po TIPU!!! JAKO BITNO
+     //Nece da radi bas kod stringova koji se nalaze na pocetku
+
+    //  if (strpos("Sredaaaa", "S") !== false) {
+    //     echo "<p>String 'S' se nalazi u stringu 'Sredaaaa'</p>";
+    //  }
+    //  else {
+    //     echo "<p>String 'S' se ne nalazi u stringu 'Sredaaaa'</p>";
+    //  }
+    //  echo "<hr>";
+    $imena = ["Stefan", "Marija", "Ana", "Uros", "Djordje"];
+    $brojSadrziA = 0;
+    for ($i = 0; $i < count($imena); $i++) {
+        if (strpos($imena[$i], "a") !== false) {
+            $brojSadrziA++;
+        } 
+    }
+    echo "<p>Broj stringova koji sadrze slovo 'a' je: $brojSadrziA</p>";
+    echo "<hr>";
+
+
+      ///////////////////////// 
+
+      /*18. ZADATAK
+      Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A'. */
+      $imena = ["Stefan", "Marija", "Ana", "Uros", "Djordje"];
+      $brojPocinjeA = 0;
+      for ($i = 0; $i < count($imena); $i++) {
+        //   if (strpos($imena[$i], "a" === 0) || strpos($imena[$i], "A" === 0 )) 
+        // if($imena[$i][0] == 'a' || $imena[$i][0] == 'A')
+        if (strtolower($imena[$i][0]) == 'a')
+        {
+              $brojPocinjeA++;
+          } 
+      }
+      echo "<p>Broj stringova koji sadrze slovo 'a' je: $brojPocinjeA</p>";
+      echo "<hr>";
+
+     ///////////////////////// 
+
+     /*19. ZADATAK
+      Na osnovu celobrojnog niza $a[0], $a[1], … formirati niz $b[0], $b[1], ... koji sadrži samo pozitivne brojeve. */
+
+      ///////////////////////// 
+
+      /*20. ZADATAK
+       Dati su nizovi 
+        $a[0], $a[1], …, $a[n - 1] i  
+        $b[0], $b[1], …, $b[n - 1]. 
+        Formirati niz $c[0], $c[1], …, $c[2n – 1] čiji su elementi 
+        $a[0], $b[0], $a[1], $b[1], …, $a[n - 1], $b[n - 1]. */
+
+    ///////////////////////// 
+
+    /*21. ZADATAK
+    Dati su nizovi 
+$a[0], $a[1], …, $a[n - 1] i  
+$b[0], $b[1], …, $b[n - 1]. 
+Formirati niz $c[0], $c[1], …, $c[n – 1] čiji su elementi 
+$a[0] * $b[0], $a[1] * $b[1], …, $a[n – 1] * $b[n – 1]. */
+
+
+
+
+    
+
 ?>
